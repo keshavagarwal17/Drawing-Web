@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Drawing Web</title>
+</head>
+<body>
+    <nav>
+        <div>
+            <h1>My Drawing</h1>
+        </div>
+        <div>
+            <img src="brush.png" class="brush" alt="change color">
+            <ul class="colors hide-color">
+                <li class="color1" onclick="changecolor('#ec0101')"></li>
+                <li class="color2" onclick="changecolor('#0f3460')"></li>
+                <li class="color3" onclick="changecolor('#ffc93c')"></li>
+                <li class="color4" onclick="changecolor('#050505')"></li>
+            </ul>
+        </div>
+    </nav>
+    <canvas class="canvas"></canvas>
+    <script src="./app.js"></script>
+</body>
+</html>
