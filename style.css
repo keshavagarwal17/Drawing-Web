@@ -10,6 +10,11 @@ body{
     cursor: pointer;
     font-weight: bold;
 }
+.Eraser{
+    height:50px;
+    cursor: pointer;
+    font-weight: bold;
+}
 nav{
     box-sizing:border-box;
     background-color: #40a8c4;
@@ -17,7 +22,9 @@ nav{
     justify-content: space-between;
     padding: 10px;
 }
-
+nav h1{
+    font-size: 25px;
+}
 
 .color1{
     background-color:#ec0101;
@@ -38,7 +45,14 @@ li{
     list-style-type: none;
     cursor: pointer;
     margin: 10px;
+    border: 2px solid white;
 }
-.hide-color{
-    display: none;
+.colors{
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 1s;
+}
+.color-list{
+    display: flex;
 }

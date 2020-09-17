@@ -18,12 +18,12 @@ canvas.addEventListener('mousedown',(event)=>{
 canvas.addEventListener('mousemove',(event)=>{
     if(isDrawing){
     c1.moveTo(x,y);
-    console.log(event.offsetY)
     c1.lineTo(event.offsetX,event.offsetY);
     x = event.offsetX;
     y = event.offsetY;
     c1.strokeStyle= color;
-    c1.stroke();}
+    c1.stroke();
+    }
 })
 
 canvas.addEventListener("mouseup",()=>{
@@ -35,5 +35,14 @@ const changecolor = (p) =>{
 }
 
 brushPic.addEventListener("click",()=>{
-    colorblock.classList.toggle("hide-color");
+    if(colorblock.style.opacity==1){
+        console.log("i am here")
+        console.log(colorblock.style.display)
+        colorblock.style.opacity=0;
+        colorblock.style.maxHeight=null;
+
+    }else{
+        colorblock.style.opacity=1;
+        colorblock.style.maxHeight=colorblock.scrollHeight+'px';
+    }
 })
