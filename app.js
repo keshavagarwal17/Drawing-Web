@@ -19,6 +19,7 @@ canvas.addEventListener('touchstart',(event)=>{
     x = event.offsetX;
     y = event.offsetY;
     isDrawing = true;
+    alert("hello");
 })
 
 
