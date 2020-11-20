@@ -9,19 +9,23 @@
         <div>
             <h1>My Drawing</h1>
         </div>
-        <div>
-            <img src="brush.png" class="brush" alt="change color">
-            
-            <div class="colors">
-                <ul class="color-list">
-                    <li class="color1" onclick="changecolor('#ec0101')"></li>
-                    <li class="color2" onclick="changecolor('#0f3460')"></li>
-                    <li class="color3" onclick="changecolor('#ffc93c')"></li>
-                    <li class="color4" onclick="changecolor('#050505')"></li>
-                </ul>
+        <div class="option">
+            <div>
+                <img src="brush.png" class="brush" alt="change color">
+            </div>
+            <div>
+                <img src="rubber.png" class="Eraser" alt="change color">
             </div>
         </div>
     </nav>
+    <div class="colors">
+        <ul class="color-list">
+            <li class="color1" onclick="changecolor('#ec0101')"></li>
+            <li class="color2" onclick="changecolor('#1ecbe1')"></li>
+            <li class="color3" onclick="changecolor('#ffc93c')"></li>
+            <li class="color4" onclick="changecolor('#050505')"></li>
+        </ul>
+    </div>
     <canvas class="canvas"></canvas>
     <script src="./app.js"></script>
 </body>
