@@ -1,6 +1,8 @@
 const canvas = document.getElementsByClassName("canvas")[0];
 const brushPic = document.getElementsByClassName('brush')[0];
 const eraserPic = document.getElementsByClassName('Eraser')[0];
+const clearButton = document.getElementsByClassName('clear')[0];
+const downloadButton = document.getElementsByClassName('download')[0];
 const colorblock = document.getElementsByClassName('colors')[0];
 var c1 = canvas.getContext('2d');
 
@@ -17,11 +19,27 @@ canvas.addEventListener('mousedown',(event)=>{
     isDrawing = true;
 })
 
+downloadButton.addEventListener('click',()=>{
+    var image = canvas.toDataURL("image/png", 1.0).replace("image/png", "image/octet-stream");
+    var link = document.createElement('a');
+    link.download = "drawing-web-image.png";
+    link.href = image;
+    link.click();
+})
+
+clearButton.addEventListener('click',()=>{
+    c1.clearRect(0,0,window.innerWidth,window.innerHeight);
+})
+
 eraserPic.addEventListener('click',(event)=>{
     eraser = true;
+    colorblock.style.transform= "translateX(220px)";
+    colorblock.style.opacity=0;
     eraserPic.style.borderBottom = "1px solid black";
     brushPic.style.borderBottom = "none";
 })
+
+
 
 canvas.addEventListener('touchstart',(event)=>{
     x = event.offsetX;
@@ -81,7 +99,6 @@ brushPic.addEventListener("click",()=>{
     if(colorblock.style.opacity==1){
         colorblock.style.opacity=0;
         colorblock.style.transform= "translateX(220px)";
-
     }else{
         colorblock.style.opacity=1;
         colorblock.style.transform= "translateX(0px)";

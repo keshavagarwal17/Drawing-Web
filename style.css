@@ -6,18 +6,18 @@ body{
     overflow: hidden;
 }
 .brush{
-    height:60px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.5s;
     border-bottom: 1px solid black;
 }
-.Eraser{
-    height:50px;
+.brush,.download,.Eraser,.clear{
+    padding-bottom: 7px;
+    margin: 10px;
     cursor: pointer;
-    font-weight: bold;
-    transform:rotateY(140deg) ;
+    color:#0c0c0cc5;
+    font-size: 23px;
     transition: all 0.5s;
+}
+.brush:hover,.download:hover,.Eraser:hover,.clear:hover{
+    transform: scale(1.2);
 }
 nav{
     box-sizing:border-box;
